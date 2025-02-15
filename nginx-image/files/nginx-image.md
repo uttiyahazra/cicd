@@ -1,8 +1,8 @@
-#### Building and Running Docker Containers
+### Building and Running Docker Containers
 
-##### Building Docker Images from Dockerfile
+#### Building Docker Images from Dockerfile
 
-###### Create Project Directory
+##### Create Project Directory
 
 Creating a Docker image with Dockerfile requires setting up a project directory. The directory contains the Dockerfile and stores all other files involved in building the image. In this example folders named _nginx-image_ and _files_ and a file _.dockerignore_ were created:
 
@@ -13,7 +13,7 @@ mkdir files
 touch .dockerignore
 ```
 
-###### Create a sample index.html & configurations file
+##### Create a sample index.html & configurations file
 
 Navigate to the _files_ folder and create an _index.html_ file with following content:
 
@@ -49,7 +49,7 @@ server {
 }
 ```
 
-###### Create Dockerfile
+##### Create Dockerfile
 
 Create a Dockerfile in the created _nginx-image_ folder with following contents:
 
@@ -63,7 +63,7 @@ EXPOSE 80
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 ```
 
-###### Building the Docker Image
+##### Building the Docker Image
 
 With the following command, the image will be build from the previously created Dockerfile in the _files_ directory, upom execution of which the Docker build events can be observed as follows:
 
@@ -93,7 +93,7 @@ The following command can be used to list the built images:
 docker images
 ```
 
-###### Test the Docker Image
+##### Test the Docker Image
 
 The following command is used to run the built image:
 
@@ -109,7 +109,7 @@ The container can be checked using below command:
 docker ps
 ```
 
-###### Pushing Docker Image to Docker Hub
+##### Pushing Docker Image to Docker Hub
 
 In order to push the docker image to a private DockerHb account, it is necessary to have a DockerHub Personal account as pre-requisite. Afterwards with the credentials the login can be done:
 
