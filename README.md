@@ -23,6 +23,10 @@ docker image prune
 ##### Login into Docker
 docker login -u <username>
 
+##### Tag the image with username:
+
+docker tag <image_name> <username>/<image_name>
+
 ##### Publish an image to Docker Hub
 docker push <username>/<image_name>
 
@@ -79,4 +83,17 @@ docker --help
 
 #### Display system-wide information
 docker info
+```
+#### Docker Scout
+
+```bash
+#### Overview of Vulnerabilities:
+
+docker scout quickview  <image_name> (or <image_id>)
+docker scout cves <image_name> (or <image_id>)
+
+#### Recommendations about base image:
+
+docker scout recommendations <image_name> (or <image_id>)
+
 ```
