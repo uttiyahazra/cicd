@@ -1,7 +1,7 @@
 name: Simple CI Pipeline with npm Install and Test
 on: 
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 jobs:
   build:
     runs-on: ubuntu-latest
