@@ -23,6 +23,4 @@
           - vim
           - net-tools
           - bind9-dnsutils
-          - kubectl
-          - helm
         state: present
